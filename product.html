@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>Автозапчасти</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- FancyBox -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+		<script>
+		$(document).ready(function(){		
+			$('.fancybox').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+		});
+
+  		</script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/logo.png.webp">
+						<div class="logo-text">
+							<p class="big-logo">Автозапчасти</p>
+							<p class="small-logo">Малиновка</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">Мой аккаунт</a></li>
+								<li><a href="orders.html">Корзина</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/imj-1.jpg.webp"></td>
+										<td>product name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img-2.jpg.webp"></td>
+										<td>product name</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/imj-1.jpg.webp"></td>
+										<td>product name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img-2.jpg.webp"></td>
+										<td>product name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="shop.html">Каталог</a></li>
+						<li><a href="about.html">Мы</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="поиск">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li> / </li>
+					<li><a href="">Каталог</a></li>
+					<li> / </li>
+					<li><a href="">Продукты</a></li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<div class="single-product">
+				<div class="images-section">
+					<div class="larg-img">
+						<img src="img/product/imj-1.jpg.webp">
+					</div>
+					<div class="small-img">
+						<a class="fancybox" rel="group" href="img/product/imj-1.jpg.webp">
+							<img src="img/product/img-2.jpg.webp">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img-2.jpg.webp">
+							<img src="img/product/img-3.jpg.webp">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img-3.jpg.webp">
+							<img src="img/product/imj-1.jpg.webp">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img-4.jpg.webp">
+							<img src="img/product/img-4.jpg.webp">
+						</a>
+					</div>
+				</div> <!-- End of Images Section-->
+
+				<div class="product-detail">
+					<div class="product-name">
+						<h2>Шины</h2>
+					</div>
+					<div class="product-price">
+						<h3>2</h3>
+					</div>
+					<hr>
+					<div class="product-description">
+						<p>Производитель:Kama,
+							Ширина профиля-175,
+							Высота профиля-65,
+							Диаметр-14,
+							Сезон-летние.</p>
+					</div>
+					<hr>
+					<div class="product-cart">
+						<form id="cart-form">
+							<div class="form-group">
+								<input type="number" class="cart-number" name="cartNumber" value="1" min="1" max="10">
+								<input type="submit" name="addToCart" value="Add To Cart">
+							</div>
+						</form>
+						<form id="wishlist-form">
+							<div class="form-group">
+								<input type="checkbox" class="wishlist" name="wishlist"> Добавить в желаемое 
+							</div>
+						</form>
+					</div>
+					<hr>
+					<div class="product-meta">
+						<p><b>Category: </b> Product</p>
+						<p><b>Share This Product: </b> Facebook, Twitter</p>
+					</div>
+				</div> <!-- End of Product Detail-->
+			</div>
+			<hr>
+			<div class="product-long-description">
+				<h3>Описание</h3>
+				<p>
+		         Чёткие Шины 
+				</p>
+				<p>
+			      Реально офигенчик 
+				</p>
+			</div>
+			<hr>
+			<div class="new-product-section">
+				<div class="product-section-heading">
+					<h2>Рекомендуемые продукты <img src="img/icons/good_quality.png"></h2>
+					<h3>Лучшее для вас!</h3>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/imj-1.jpg.webp">
+						</a>
+						<div class="product-detail">
+							<h3>Шины</h3>
+							<h2>...</h2>
+							<a href="#">Купить</a>
+							<p>25</p>
+						</div>						
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img-2.jpg.webp">
+						</a>
+						<div class="product-detail">
+							<h3>Шины</h3>
+							<h2>...</h2>
+							<a href="#">Купить</a>
+							<p>30</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img-3.jpg.webp">
+						</a>
+						<div class="product-detail">
+							<h3>Шины</h3>
+							<h2>...</h2>
+							<a href="#">Купить</a>
+							<p>25</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img-4.jpg.webp">
+						</a>
+						<div class="product-detail">
+							<h3>Шины</h3>
+							<h2>...</h2>
+							<a href="#">Купить</a>
+							<p>30</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- Recommend Product Section -->
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>О нас</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">О компании</a></li>
+							<li><a href="contact.html">Контакты</a></li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Информация</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">Мой аккаунт</a></li>
+							<li><a href="orders.html">Корзина</a></li>
+							<li><a href="cart.html">Карта</a></li>
+							<li><a href="checkout.html">...</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Подписаться</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="#"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<h3>Получай свежие предложения</h3>
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="Почта">
+									<img src="img/icons/paper_plane.png">
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>2025 Pavel Bosy Ёpt</p>
+				</div>
+				<div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div>
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>
