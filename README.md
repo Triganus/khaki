@@ -1,1 +1,1 @@
-https://github.com/Triganus?tab=repositories
+https://github.com/Triganus/khaki
